@@ -1,0 +1,12 @@
+# Páginas de error personalizadas (4xx / 5xx)
+ErrorDocument 403 /lab09-php/errores/error.php?codigo=403
+ErrorDocument 404 /lab09-php/errores/error.php?codigo=404
+ErrorDocument 500 /lab09-php/errores/error.php?codigo=500
+
+# No listar el contenido de las carpetas
+Options -Indexes
+
+# Bloquear el acceso directo al archivo de funciones
+<Files "funciones.php">
+    Require all denied
+</Files>

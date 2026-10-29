@@ -1,0 +1,96 @@
+/* Estilos compartidos – Lab 09 Registro de Contacto */
+:root {
+  --fondo: #f3f5f9;
+  --tarjeta: #ffffff;
+  --texto: #1f2933;
+  --suave: #616e7c;
+  --borde: #d9e0e8;
+  --primario: #2f5d8a;
+  --php: #6c63b5;
+  --jsp: #c0612b;
+  --ok: #1e7b4a;
+  --error: #b42318;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 440px;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(31, 41, 51, 0.06);
+}
+.tarjeta.ancha { max-width: 720px; }
+
+.etiqueta {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.etiqueta.php { background: var(--php); }
+.etiqueta.jsp { background: var(--jsp); }
+
+h1 { font-size: 24px; margin: 12px 0 4px; }
+h2 { font-size: 18px; margin: 24px 0 8px; }
+h1.ok { color: var(--ok); }
+h1.error { color: var(--error); }
+.subtitulo { color: var(--suave); margin-top: 0; }
+
+label { display: block; font-weight: 600; margin: 16px 0 6px; }
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  font: inherit;
+}
+input:focus { outline: 2px solid var(--primario); border-color: transparent; }
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 11px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--primario);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.1); }
+button.secundario {
+  width: auto;
+  background: transparent;
+  color: var(--error);
+  border: 1px solid var(--error);
+  padding: 8px 14px;
+}
+
+table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--borde); }
+th { background: var(--fondo); font-weight: 600; }
+
+.errores { color: var(--error); padding-left: 20px; }
+.vacio { color: var(--suave); font-style: italic; }
+.pie { margin-top: 24px; font-size: 14px; }
+a { color: var(--primario); }
+code { background: var(--fondo); padding: 2px 6px; border-radius: 4px; }
