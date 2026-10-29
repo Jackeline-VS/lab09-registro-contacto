@@ -1,0 +1,20 @@
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+nbproject/
+
+# Java / Tomcat
+*.class
+*.war
+target/
+build/
+work/
+
+# Logs
+*.log
